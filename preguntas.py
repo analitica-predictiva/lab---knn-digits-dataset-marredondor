@@ -33,7 +33,7 @@ def pregunta_02():
     Complete el código presentado a continuación.
     """
     # Importe KNeighborsClassifier de sklearn.neighbors
-    from sklearn.neighbors import KNeighborsRegressor
+    from sklearn.neighbors import KNeighborsClassifier 
 
     # Importe train_test_split de sklearn.model_selection
     from sklearn.model_selection import train_test_split
@@ -53,7 +53,7 @@ def pregunta_02():
     )
 
     # Cree un clasificador con siete vecinos
-    knn = KNeighborsRegressor(n_neighbors=7)
+    knn = KNeighborsClassifier(n_neighbors=7)
 
     # Entrene el clasificador
     knn.fit(X_train, y_train)
@@ -68,7 +68,7 @@ def pregunta_03():
     """
 
     # Importe KNeighborsClassifier de sklearn.neighbors
-    from sklearn.neighbors import KNeighborsRegressor
+    from sklearn.neighbors import KNeighborsClassifier 
 
     # Importe train_test_split de sklearn.model_selection
     from sklearn.model_selection import train_test_split
@@ -95,7 +95,7 @@ def pregunta_03():
     # Se itera sobre diferentes valores de vecinos
     for i, k in enumerate(neighbors):
         # Cree un clasificador con k vecinos
-        knn = KNeighborsRegressor(n_neighbors=k)
+        knn = KNeighborsClassifier(n_neighbors=k)
 
         # Entrene el clasificador con los datos de entrenamiento
         knn.fit(X_train, y_train)
